@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E3FD413829724661C3EEA99F /* libPods-iBike with MVC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BE2C243C285B4F33183597 /* libPods-iBike with MVC.a */; };
+		EE00FF59247E16EA00894802 /* ShowStationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE00FF58247E16E900894802 /* ShowStationsTableViewCell.swift */; };
+		EE09C1E7247CE52F00B3B33E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE09C1E6247CE52F00B3B33E /* AppDelegate.swift */; };
+		EE09C1E9247CE52F00B3B33E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE09C1E8247CE52F00B3B33E /* SceneDelegate.swift */; };
+		EE09C1EB247CE52F00B3B33E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE09C1EA247CE52F00B3B33E /* HomeViewController.swift */; };
+		EE09C1EE247CE52F00B3B33E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE09C1EC247CE52F00B3B33E /* Main.storyboard */; };
+		EE09C1F0247CE53200B3B33E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE09C1EF247CE53200B3B33E /* Assets.xcassets */; };
+		EE09C1F3247CE53200B3B33E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE09C1F1247CE53200B3B33E /* LaunchScreen.storyboard */; };
+		EE09C1FE247CE71B00B3B33E /* jsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE09C1FD247CE71B00B3B33E /* jsonData.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		46FE04AEE935D935C564FE97 /* Pods-iBike with MVC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iBike with MVC.debug.xcconfig"; path = "Target Support Files/Pods-iBike with MVC/Pods-iBike with MVC.debug.xcconfig"; sourceTree = "<group>"; };
+		78BE2C243C285B4F33183597 /* libPods-iBike with MVC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iBike with MVC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8039CF7FB9B825A5FEEF3E5F /* Pods-iBike with MVC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iBike with MVC.release.xcconfig"; path = "Target Support Files/Pods-iBike with MVC/Pods-iBike with MVC.release.xcconfig"; sourceTree = "<group>"; };
+		EE00FF58247E16E900894802 /* ShowStationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowStationsTableViewCell.swift; sourceTree = "<group>"; };
+		EE09C1E3247CE52F00B3B33E /* iBike with MVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iBike with MVC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE09C1E6247CE52F00B3B33E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE09C1E8247CE52F00B3B33E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EE09C1EA247CE52F00B3B33E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		EE09C1ED247CE52F00B3B33E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE09C1EF247CE53200B3B33E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE09C1F2247CE53200B3B33E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE09C1F4247CE53200B3B33E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE09C1FD247CE71B00B3B33E /* jsonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jsonData.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE09C1E0247CE52F00B3B33E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3FD413829724661C3EEA99F /* libPods-iBike with MVC.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		72E312116134FF894E1F8BF2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78BE2C243C285B4F33183597 /* libPods-iBike with MVC.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B257ADB4692FFAE800059E69 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46FE04AEE935D935C564FE97 /* Pods-iBike with MVC.debug.xcconfig */,
+				8039CF7FB9B825A5FEEF3E5F /* Pods-iBike with MVC.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EE09C1DA247CE52F00B3B33E = {
+			isa = PBXGroup;
+			children = (
+				EE09C1E5247CE52F00B3B33E /* iBike with MVC */,
+				EE09C1E4247CE52F00B3B33E /* Products */,
+				B257ADB4692FFAE800059E69 /* Pods */,
+				72E312116134FF894E1F8BF2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EE09C1E4247CE52F00B3B33E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE09C1E3247CE52F00B3B33E /* iBike with MVC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE09C1E5247CE52F00B3B33E /* iBike with MVC */ = {
+			isa = PBXGroup;
+			children = (
+				EE09C1FA247CE6C100B3B33E /* Model */,
+				EE09C1FB247CE6C800B3B33E /* View */,
+				EE09C1FC247CE6D900B3B33E /* Controller */,
+				EE09C1E6247CE52F00B3B33E /* AppDelegate.swift */,
+				EE09C1E8247CE52F00B3B33E /* SceneDelegate.swift */,
+				EE09C1EA247CE52F00B3B33E /* HomeViewController.swift */,
+				EE09C1EC247CE52F00B3B33E /* Main.storyboard */,
+				EE09C1EF247CE53200B3B33E /* Assets.xcassets */,
+				EE09C1F1247CE53200B3B33E /* LaunchScreen.storyboard */,
+				EE09C1F4247CE53200B3B33E /* Info.plist */,
+			);
+			path = "iBike with MVC";
+			sourceTree = "<group>";
+		};
+		EE09C1FA247CE6C100B3B33E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE09C1FD247CE71B00B3B33E /* jsonData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EE09C1FB247CE6C800B3B33E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE00FF58247E16E900894802 /* ShowStationsTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EE09C1FC247CE6D900B3B33E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE09C1E2247CE52F00B3B33E /* iBike with MVC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE09C1F7247CE53200B3B33E /* Build configuration list for PBXNativeTarget "iBike with MVC" */;
+			buildPhases = (
+				64A1C230BC0545DF4A98ECCF /* [CP] Check Pods Manifest.lock */,
+				EE09C1DF247CE52F00B3B33E /* Sources */,
+				EE09C1E0247CE52F00B3B33E /* Frameworks */,
+				EE09C1E1247CE52F00B3B33E /* Resources */,
+				76E249A804521C33639630FB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iBike with MVC";
+			productName = "iBike with MVC";
+			productReference = EE09C1E3247CE52F00B3B33E /* iBike with MVC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE09C1DB247CE52F00B3B33E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = CS01196;
+				TargetAttributes = {
+					EE09C1E2247CE52F00B3B33E = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = EE09C1DE247CE52F00B3B33E /* Build configuration list for PBXProject "iBike with MVC" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE09C1DA247CE52F00B3B33E;
+			productRefGroup = EE09C1E4247CE52F00B3B33E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE09C1E2247CE52F00B3B33E /* iBike with MVC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE09C1E1247CE52F00B3B33E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE09C1F3247CE53200B3B33E /* LaunchScreen.storyboard in Resources */,
+				EE09C1F0247CE53200B3B33E /* Assets.xcassets in Resources */,
+				EE09C1EE247CE52F00B3B33E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		64A1C230BC0545DF4A98ECCF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iBike with MVC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76E249A804521C33639630FB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iBike with MVC/Pods-iBike with MVC-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iBike with MVC/Pods-iBike with MVC-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iBike with MVC/Pods-iBike with MVC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE09C1DF247CE52F00B3B33E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE09C1EB247CE52F00B3B33E /* HomeViewController.swift in Sources */,
+				EE09C1FE247CE71B00B3B33E /* jsonData.swift in Sources */,
+				EE09C1E7247CE52F00B3B33E /* AppDelegate.swift in Sources */,
+				EE00FF59247E16EA00894802 /* ShowStationsTableViewCell.swift in Sources */,
+				EE09C1E9247CE52F00B3B33E /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EE09C1EC247CE52F00B3B33E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE09C1ED247CE52F00B3B33E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE09C1F1247CE53200B3B33E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE09C1F2247CE53200B3B33E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE09C1F5247CE53200B3B33E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE09C1F6247CE53200B3B33E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE09C1F8247CE53200B3B33E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46FE04AEE935D935C564FE97 /* Pods-iBike with MVC.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "iBike with MVC/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iBike-with-MVC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE09C1F9247CE53200B3B33E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8039CF7FB9B825A5FEEF3E5F /* Pods-iBike with MVC.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "iBike with MVC/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iBike-with-MVC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE09C1DE247CE52F00B3B33E /* Build configuration list for PBXProject "iBike with MVC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE09C1F5247CE53200B3B33E /* Debug */,
+				EE09C1F6247CE53200B3B33E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE09C1F7247CE53200B3B33E /* Build configuration list for PBXNativeTarget "iBike with MVC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE09C1F8247CE53200B3B33E /* Debug */,
+				EE09C1F9247CE53200B3B33E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE09C1DB247CE52F00B3B33E /* Project object */;
+}

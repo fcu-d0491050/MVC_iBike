@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol ButtonDelegate {
+    func tapButton(_ data: ALLiBike)
+}
+
 class ShowStationsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var stationsNameButton: UIButton!
@@ -16,6 +20,9 @@ class ShowStationsTableViewCell: UITableViewCell {
     @IBOutlet weak var emptyImageView: UIImageView!
     @IBOutlet weak var emptyLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
+    
+    private var buttonDelegate: ButtonDelegate?
+    private var alliBike: ALLiBike?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,6 +33,28 @@ class ShowStationsTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    @IBAction func didTapStationsButton(_ sender: UIButton) {
+        
+        guard let data = self.alliBike else { return }
+        buttonDelegate?.tapButton(data)
+        
+        let buttonTitle = sender.title(for: .normal)
+        print(buttonTitle!)
+        
+    }
+    
+    func configCell(_ data: ALLiBike, delegate: ButtonDelegate) {
+        self.buttonDelegate = delegate
+        self.alliBike = data
+        self.stationsNameButton.contentHorizontalAlignment = .leading
+        self.stationsNameButton.setTitle(data.Position!, for: .normal)
+        self.availableImageView.image = UIImage(named: "availableImage")
+        self.availableLabel.text = String((data.AvailableCNT!))
+        self.emptyImageView.image = UIImage(named: "emptyImage")
+        self.emptyLabel.text = String((data.EmpCNT!))
+        self.addressLabel.text = String((data.CAddress!))
     }
 
 }

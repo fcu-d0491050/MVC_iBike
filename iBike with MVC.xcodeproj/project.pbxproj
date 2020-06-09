@@ -15,7 +15,11 @@
 		EE09C1EE247CE52F00B3B33E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE09C1EC247CE52F00B3B33E /* Main.storyboard */; };
 		EE09C1F0247CE53200B3B33E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE09C1EF247CE53200B3B33E /* Assets.xcassets */; };
 		EE09C1F3247CE53200B3B33E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE09C1F1247CE53200B3B33E /* LaunchScreen.storyboard */; };
-		EE09C1FE247CE71B00B3B33E /* jsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE09C1FD247CE71B00B3B33E /* jsonData.swift */; };
+		EE09C1FE247CE71B00B3B33E /* JsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE09C1FD247CE71B00B3B33E /* JsonData.swift */; };
+		EEC67239247F4E7D00E3F6CD /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC67238247F4E7D00E3F6CD /* WebViewController.swift */; };
+		EEC6724B247F7F8800E3F6CD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC6724A247F7F8800E3F6CD /* WebKit.framework */; };
+		EEC6724D247F8B2800E3F6CD /* ServiceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC6724C247F8B2800E3F6CD /* ServiceTableViewController.swift */; };
+		EEC6724F247F8C0800E3F6CD /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC6724E247F8C0800E3F6CD /* ServiceTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +35,11 @@
 		EE09C1EF247CE53200B3B33E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE09C1F2247CE53200B3B33E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE09C1F4247CE53200B3B33E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EE09C1FD247CE71B00B3B33E /* jsonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jsonData.swift; sourceTree = "<group>"; };
+		EE09C1FD247CE71B00B3B33E /* JsonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonData.swift; sourceTree = "<group>"; };
+		EEC67238247F4E7D00E3F6CD /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		EEC6724A247F7F8800E3F6CD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		EEC6724C247F8B2800E3F6CD /* ServiceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewController.swift; sourceTree = "<group>"; };
+		EEC6724E247F8C0800E3F6CD /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEC6724B247F7F8800E3F6CD /* WebKit.framework in Frameworks */,
 				E3FD413829724661C3EEA99F /* libPods-iBike with MVC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,6 +58,7 @@
 		72E312116134FF894E1F8BF2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EEC6724A247F7F8800E3F6CD /* WebKit.framework */,
 				78BE2C243C285B4F33183597 /* libPods-iBike with MVC.a */,
 			);
 			name = Frameworks;
@@ -89,7 +99,6 @@
 				EE09C1FC247CE6D900B3B33E /* Controller */,
 				EE09C1E6247CE52F00B3B33E /* AppDelegate.swift */,
 				EE09C1E8247CE52F00B3B33E /* SceneDelegate.swift */,
-				EE09C1EA247CE52F00B3B33E /* HomeViewController.swift */,
 				EE09C1EC247CE52F00B3B33E /* Main.storyboard */,
 				EE09C1EF247CE53200B3B33E /* Assets.xcassets */,
 				EE09C1F1247CE53200B3B33E /* LaunchScreen.storyboard */,
@@ -101,7 +110,7 @@
 		EE09C1FA247CE6C100B3B33E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EE09C1FD247CE71B00B3B33E /* jsonData.swift */,
+				EE09C1FD247CE71B00B3B33E /* JsonData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -110,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				EE00FF58247E16E900894802 /* ShowStationsTableViewCell.swift */,
+				EEC6724E247F8C0800E3F6CD /* ServiceTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -117,6 +127,9 @@
 		EE09C1FC247CE6D900B3B33E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EEC67238247F4E7D00E3F6CD /* WebViewController.swift */,
+				EE09C1EA247CE52F00B3B33E /* HomeViewController.swift */,
+				EEC6724C247F8B2800E3F6CD /* ServiceTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -237,7 +250,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE09C1EB247CE52F00B3B33E /* HomeViewController.swift in Sources */,
-				EE09C1FE247CE71B00B3B33E /* jsonData.swift in Sources */,
+				EEC6724F247F8C0800E3F6CD /* ServiceTableViewCell.swift in Sources */,
+				EEC67239247F4E7D00E3F6CD /* WebViewController.swift in Sources */,
+				EEC6724D247F8B2800E3F6CD /* ServiceTableViewController.swift in Sources */,
+				EE09C1FE247CE71B00B3B33E /* JsonData.swift in Sources */,
 				EE09C1E7247CE52F00B3B33E /* AppDelegate.swift in Sources */,
 				EE00FF59247E16EA00894802 /* ShowStationsTableViewCell.swift in Sources */,
 				EE09C1E9247CE52F00B3B33E /* SceneDelegate.swift in Sources */,
@@ -386,7 +402,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V2X5FKHNBJ;
 				INFOPLIST_FILE = "iBike with MVC/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -404,7 +422,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V2X5FKHNBJ;
 				INFOPLIST_FILE = "iBike with MVC/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

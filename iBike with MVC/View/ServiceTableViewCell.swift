@@ -16,6 +16,8 @@ class ServiceTableViewCell: UITableViewCell {
     @IBOutlet weak var availableLavel: UILabel!
     @IBOutlet weak var updateLabel: UILabel!
     
+    private var alliBike: ALLiBike?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,6 +28,14 @@ class ServiceTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    func configCell(_ data: ALLiBike) {
+        self.alliBike = data
+        self.stationsLabel.text = data.Position!
+        self.addressLabel.text = data.CAddress!
+        self.availableLavel.text = "可借車輛：\(String((data.AvailableCNT)!))"
+        self.updateLabel.text = "更新時間：\(data.UpdateTime!)"
+        
+    }
     
 }

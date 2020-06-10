@@ -262,14 +262,14 @@
                                     <constraint firstAttribute="bottom" secondItem="qjs-AK-LXD" secondAttribute="bottom" id="oic-pL-pvb"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V8k-GW-o1f" userLabel="MenuView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V8k-GW-o1f" userLabel="MenuView" customClass="MenuView" customModule="iBike_with_MVC" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="816" width="414" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeC-5x-hfd">
                                         <rect key="frame" x="16" y="0.0" width="91" height="80"/>
                                         <state key="normal" title="服務中心" image="house.fill" catalog="system"/>
                                         <connections>
-                                            <action selector="didTapServiceButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BWU-aS-2pY"/>
+                                            <action selector="didTapServiceButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mYC-4g-Qbr"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9F-rU-OY1">
@@ -280,7 +280,7 @@
                                         <rect key="frame" x="139" y="0.0" width="87" height="80"/>
                                         <state key="normal" title="官方網站" image="link.circle.fill" catalog="system"/>
                                         <connections>
-                                            <action selector="didTapWebButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2B1-wS-wSg"/>
+                                            <action selector="didTapWebButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ES9-3f-Hg3"/>
                                         </connections>
                                     </button>
                                 </subviews>

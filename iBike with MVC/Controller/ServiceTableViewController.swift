@@ -22,19 +22,23 @@ class ServiceTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allStationsArray.count
+        return API.shared.stations.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
- 
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "serviceTableViewCell") as? ServiceTableViewCell else {return UITableViewCell()}
         
-        cell.stationsLabel.text = allStationsArray[indexPath.row].Position!
-        cell.addressLabel.text = allStationsArray[indexPath.row].CAddress!
-        cell.availableLavel.text = "可借車輛：\(String((allStationsArray[indexPath.row].AvailableCNT)!))"
-        cell.updateLabel.text = "更新時間：\(allStationsArray[indexPath.row].UpdateTime!)"
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "serviceTableViewCell") as? ServiceTableViewCell {
+            
+            let data: ALLiBike? = API.shared.stations[indexPath.row]
+            
+            if let iBikeData = data {
+                cell.configCell(iBikeData)
+            }
  
-        return cell
+            return cell
+            
+        }
+        return UITableViewCell()
     }
     
     @IBAction func didTapBackButton(_ sender: Any) {

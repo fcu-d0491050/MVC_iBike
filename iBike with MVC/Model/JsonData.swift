@@ -87,6 +87,7 @@ class API {
                     let polyline = GMSPolyline.init(path: path)
                     polyline.strokeColor = .systemBlue
                     polyline.strokeWidth = 5
+                    polyline.map = nil
                     callPolyline(polyline)
 
                 }

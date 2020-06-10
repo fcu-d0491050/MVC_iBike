@@ -19,6 +19,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var showStationsView: UIView!
     @IBOutlet weak var showStationsTableView: UITableView!
     @IBOutlet weak var menuView: UIView!
+
     
     enum Situation {
         case showAllStations
@@ -47,6 +48,7 @@ class HomeViewController: UIViewController {
         showStationsView.isHidden = true
         showStationsTableView.dataSource = self
         showStationsTableView.delegate = self
+        
         
         getStationData()
         
@@ -77,7 +79,7 @@ class HomeViewController: UIViewController {
     }
     
     func getStationData() {
-        API.shared.decodeJson { _ in
+        API.shared.decodeJson { map in
             DispatchQueue.main.async {
                 self.initMap()
             }
@@ -98,20 +100,20 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func didTapServiceButton(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let serviceVC = storyboard.instantiateViewController(identifier: "ServiceTableViewController")
-        serviceVC.modalPresentationStyle = .fullScreen
-        navigationController?.pushViewController(serviceVC, animated: true)
-        
-    }
-    
-    
-    @IBAction func didTapWebButton(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let webVC = storyboard.instantiateViewController(identifier: "WebViewController")
-        webVC.modalPresentationStyle = .fullScreen
-        navigationController?.pushViewController(webVC, animated: true)
-    }
+           let storyboard = UIStoryboard(name: "Main", bundle: nil)
+           let serviceVC = storyboard.instantiateViewController(identifier: "ServiceTableViewController")
+           serviceVC.modalPresentationStyle = .fullScreen
+           navigationController?.pushViewController(serviceVC, animated: true)
+           
+       }
+       
+       
+       @IBAction func didTapWebButton(_ sender: Any) {
+           let storyboard = UIStoryboard(name: "Main", bundle: nil)
+           let webVC = storyboard.instantiateViewController(identifier: "WebViewController")
+           webVC.modalPresentationStyle = .fullScreen
+           navigationController?.pushViewController(webVC, animated: true)
+       }
     
     @IBAction func didTapNearbyButton(_ sender: Any) {
         
@@ -326,7 +328,6 @@ extension HomeViewController: GMSMapViewDelegate {
         let destination = "\(destinationLat),\(destinationLong)"
         
         API.shared.drawDirection(origin: origin, destination: destination) { (polyline) in
-            
             mapView.clear()
             marker.map = mapView
             polyline.map = mapView

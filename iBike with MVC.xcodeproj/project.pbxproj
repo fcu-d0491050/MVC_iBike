@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA3B76082493564300653ED7 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3B76072493564300653ED7 /* APIManager.swift */; };
 		E3FD413829724661C3EEA99F /* libPods-iBike with MVC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BE2C243C285B4F33183597 /* libPods-iBike with MVC.a */; };
 		EE00FF59247E16EA00894802 /* ShowStationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE00FF58247E16E900894802 /* ShowStationsTableViewCell.swift */; };
 		EE09C1E7247CE52F00B3B33E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE09C1E6247CE52F00B3B33E /* AppDelegate.swift */; };
@@ -26,6 +27,7 @@
 		46FE04AEE935D935C564FE97 /* Pods-iBike with MVC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iBike with MVC.debug.xcconfig"; path = "Target Support Files/Pods-iBike with MVC/Pods-iBike with MVC.debug.xcconfig"; sourceTree = "<group>"; };
 		78BE2C243C285B4F33183597 /* libPods-iBike with MVC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iBike with MVC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8039CF7FB9B825A5FEEF3E5F /* Pods-iBike with MVC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iBike with MVC.release.xcconfig"; path = "Target Support Files/Pods-iBike with MVC/Pods-iBike with MVC.release.xcconfig"; sourceTree = "<group>"; };
+		DA3B76072493564300653ED7 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		EE00FF58247E16E900894802 /* ShowStationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowStationsTableViewCell.swift; sourceTree = "<group>"; };
 		EE09C1E3247CE52F00B3B33E /* iBike with MVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iBike with MVC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE09C1E6247CE52F00B3B33E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				EE09C1FD247CE71B00B3B33E /* JsonData.swift */,
+				DA3B76072493564300653ED7 /* APIManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				EE09C1EB247CE52F00B3B33E /* HomeViewController.swift in Sources */,
 				EEC6724F247F8C0800E3F6CD /* ServiceTableViewCell.swift in Sources */,
 				EEC67239247F4E7D00E3F6CD /* WebViewController.swift in Sources */,
+				DA3B76082493564300653ED7 /* APIManager.swift in Sources */,
 				EEC6724D247F8B2800E3F6CD /* ServiceTableViewController.swift in Sources */,
 				EE09C1FE247CE71B00B3B33E /* JsonData.swift in Sources */,
 				EE09C1E7247CE52F00B3B33E /* AppDelegate.swift in Sources */,

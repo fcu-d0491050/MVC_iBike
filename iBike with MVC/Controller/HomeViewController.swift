@@ -11,6 +11,12 @@ import GoogleMaps
 
 class HomeViewController: UIViewController {
     
+    enum Situation {
+           case showAllStations
+           case showNearbyStations
+           case showSearchStations
+    }
+    
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var menuButton: UIButton!
@@ -19,13 +25,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var showStationsView: UIView!
     @IBOutlet weak var showStationsTableView: UITableView!
     @IBOutlet weak var menuView: UIView!
-
-    
-    enum Situation {
-        case showAllStations
-        case showNearbyStations
-        case showSearchStations
-    }
     
     var mode : Situation = .showAllStations
     var nearbyStationsArray : [ALLiBike] = []
@@ -49,18 +48,56 @@ class HomeViewController: UIViewController {
         showStationsTableView.dataSource = self
         showStationsTableView.delegate = self
         
-        
         getStationData()
         
     }
     
-    func initMap() {
+    // MARK: - TapButton
+    @IBAction func didTapMenuButton(_ sender: Any) {
+        
+        menuView.isHidden = !menuView.isHidden
+        
+    }
+    
+    @IBAction func didTapServiceButton(_ sender: Any) {
+           let storyboard = UIStoryboard(name: "Main", bundle: nil)
+           let serviceVC = storyboard.instantiateViewController(identifier: "ServiceTableViewController")
+           serviceVC.modalPresentationStyle = .fullScreen
+           navigationController?.pushViewController(serviceVC, animated: true)
+           
+       }
+       
+       
+    @IBAction func didTapWebButton(_ sender: Any) {
+           let storyboard = UIStoryboard(name: "Main", bundle: nil)
+           let webVC = storyboard.instantiateViewController(identifier: "WebViewController")
+           webVC.modalPresentationStyle = .fullScreen
+           navigationController?.pushViewController(webVC, animated: true)
+    }
+    
+    @IBAction func didTapNearbyButton(_ sender: Any) {
+        
+        if (showStationsView.isHidden == true) {
+            mode = .showNearbyStations
+            showStationsTableView.reloadData()
+            showStationsView.isHidden = false
+        }
+        else {
+            showStationsView.isHidden = true
+        }
+    }
+    
+}
+
+// MARK: - Set GoogleMap
+extension HomeViewController {
+    
+    private func initMap() {
         
         let camera = GMSCameraPosition.camera(withLatitude: 24.164005, longitude: 120.637622, zoom: 12.0)
         mapView.camera = camera
-        /*宣告HomeViewController為locationManager的Delegate，並且開始更新位置*/
+        /*宣告HomeViewController為locationManager的Delegate*/
         locationManager.delegate = self
-        locationManager.startUpdatingLocation()
         /*宣告HomeViewController為mapView的Delegate*/
         mapView.delegate = self
         
@@ -78,52 +115,12 @@ class HomeViewController: UIViewController {
         }
     }
     
-    func getStationData() {
+    private func getStationData() {
         API.shared.decodeJson { map in
             DispatchQueue.main.async {
                 self.initMap()
             }
             
-        }
-    }
-    
-    // MARK: - TapButton
-    @IBAction func didTapMenuButton(_ sender: Any) {
-        
-        if (menuView.isHidden == true) {
-            menuView.isHidden = false
-        }
-        else {
-            menuView.isHidden = true
-        }
-        
-    }
-    
-    @IBAction func didTapServiceButton(_ sender: Any) {
-           let storyboard = UIStoryboard(name: "Main", bundle: nil)
-           let serviceVC = storyboard.instantiateViewController(identifier: "ServiceTableViewController")
-           serviceVC.modalPresentationStyle = .fullScreen
-           navigationController?.pushViewController(serviceVC, animated: true)
-           
-       }
-       
-       
-       @IBAction func didTapWebButton(_ sender: Any) {
-           let storyboard = UIStoryboard(name: "Main", bundle: nil)
-           let webVC = storyboard.instantiateViewController(identifier: "WebViewController")
-           webVC.modalPresentationStyle = .fullScreen
-           navigationController?.pushViewController(webVC, animated: true)
-       }
-    
-    @IBAction func didTapNearbyButton(_ sender: Any) {
-        
-        if (showStationsView.isHidden == true) {
-            mode = .showNearbyStations
-            showStationsTableView.reloadData()
-            showStationsView.isHidden = false
-        }
-        else {
-            showStationsView.isHidden = true
         }
     }
     
@@ -352,9 +349,9 @@ extension HomeViewController: GMSMapViewDelegate {
 }
 
 // MARK: - MyButtonDelegate
-extension HomeViewController: ButtonDelegate {
+extension HomeViewController: ShowStationsCellDelegate {
     
-    func tapButton(_ data: ALLiBike) {
+    func tapButton(data: ALLiBike) {
         mapView.animate(toLocation: CLLocationCoordinate2D(latitude: data.Y!, longitude: data.X!))
         NSLog("ALLiBike: \(data)")
         

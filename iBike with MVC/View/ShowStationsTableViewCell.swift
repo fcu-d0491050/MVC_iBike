@@ -8,8 +8,8 @@
 
 import UIKit
 
-protocol ButtonDelegate {
-    func tapButton(_ data: ALLiBike)
+protocol ShowStationsCellDelegate {
+    func tapButton(data: ALLiBike)
 }
 
 class ShowStationsTableViewCell: UITableViewCell {
@@ -21,7 +21,7 @@ class ShowStationsTableViewCell: UITableViewCell {
     @IBOutlet weak var emptyLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     
-    private var buttonDelegate: ButtonDelegate?
+    private var buttonDelegate: ShowStationsCellDelegate?
     private var alliBike: ALLiBike?
     
     override func awakeFromNib() {
@@ -32,20 +32,20 @@ class ShowStationsTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
     @IBAction func didTapStationsButton(_ sender: UIButton) {
         
-        guard let data = self.alliBike else { return }
-        buttonDelegate?.tapButton(data)
+        guard let iBikeData = self.alliBike else { return }
+        /*透過buttonDelegate去執行protocol的function，傳iBikeData給delegate*/
+        buttonDelegate?.tapButton(data: iBikeData)
         
         let buttonTitle = sender.title(for: .normal)
         print(buttonTitle!)
         
     }
     
-    func configCell(_ data: ALLiBike, delegate: ButtonDelegate) {
+    func configCell(_ data: ALLiBike, delegate: ShowStationsCellDelegate) {
         self.buttonDelegate = delegate
         self.alliBike = data
         self.stationsNameButton.contentHorizontalAlignment = .leading

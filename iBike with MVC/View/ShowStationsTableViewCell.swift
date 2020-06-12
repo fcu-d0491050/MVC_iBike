@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ShowStationsCellDelegate {
-    func tapButton(data: ALLiBike)
+    func tapStationsCellButton(data: ALLiBike)
 }
 
 class ShowStationsTableViewCell: UITableViewCell {
@@ -38,7 +38,7 @@ class ShowStationsTableViewCell: UITableViewCell {
         
         guard let iBikeData = self.alliBike else { return }
         /*透過buttonDelegate去執行protocol的function，傳iBikeData給delegate*/
-        buttonDelegate?.tapButton(data: iBikeData)
+        buttonDelegate?.tapStationsCellButton(data: iBikeData)
         
         let buttonTitle = sender.title(for: .normal)
         print(buttonTitle!)

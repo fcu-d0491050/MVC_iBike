@@ -351,7 +351,7 @@ extension HomeViewController: GMSMapViewDelegate {
 // MARK: - MyButtonDelegate
 extension HomeViewController: ShowStationsCellDelegate {
     
-    func tapButton(data: ALLiBike) {
+    func tapStationsCellButton(data: ALLiBike) {
         mapView.animate(toLocation: CLLocationCoordinate2D(latitude: data.Y!, longitude: data.X!))
         NSLog("ALLiBike: \(data)")
         
